@@ -3,6 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Primary Colors*/
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  /* Neutral Colors */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
 }
 
 @theme inline {
@@ -10,6 +20,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-inter: var(--font-inter);
+
+  --color-soft-orange: var(--soft-orange);
+  --color-soft-red: var(--soft-red);
+
+  --color-off-white: var(--off-white);
+  --color-grayish-blue: var(--grayish-blue);
+  --color-dark-grayish-blue: var(--dark-grayish-blue);
+  --color-very-dark-blue: var(--very-dark-blue);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +42,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+}
+
+p{
+  @apply text-dark-grayish-blue;
 }
